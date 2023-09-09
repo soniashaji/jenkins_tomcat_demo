@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven 'maven3'
+        maven 'maven-3.9'
     }
     parameters {
         string defaultValue: '100.26.235.195', name: 'tomcat-server'
