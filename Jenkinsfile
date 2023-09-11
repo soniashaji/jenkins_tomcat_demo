@@ -20,6 +20,10 @@ pipeline {
             }
         }
         stage('Deploy on Tomcat'){
+            input {
+                  message 'Ready To Deploy?'
+                  ok 'OK'
+            }
             steps{
                 echo 'Deploying on Tomcat '
                 sshagent(['tomcat-key']) {
